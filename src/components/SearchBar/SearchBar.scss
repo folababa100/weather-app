@@ -1,0 +1,39 @@
+.SearchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+
+  button {
+    margin-left: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #f4f4f4;
+  }
+
+  button:active {
+    background-color: #e4e4e4;
+  }
+
+  button:focus {
+    outline: none;
+  }
+
+  button:disabled {
+    cursor: not-allowed;
+  }
+}
