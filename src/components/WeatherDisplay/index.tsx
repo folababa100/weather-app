@@ -3,7 +3,16 @@ import React from 'react';
 
 
 interface WeatherDisplayProps {
-  weatherData: any;
+  weatherData: {
+    name: string;
+    weather: {
+      description: string;
+    }[];
+    main: {
+      temp: number;
+      humidity: number;
+    };
+  } | null
 }
 
 const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ weatherData }) => {
