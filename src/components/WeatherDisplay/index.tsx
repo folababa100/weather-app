@@ -16,7 +16,8 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ weather }) => {
       <div>
         <h2>{weather?.name}</h2>
         <p>{weather?.weather?.[0]?.description}</p>
-        <p>Temperature: {weather?.main?.temp}°C</p>
+        {/*<p>Temperature: {parseInt(String(weather?.main?.temp / 100))}°C</p>*/}
+        <p>Temperature: {Math.floor(weather?.main?.temp)}°C</p>
         <p>Humidity: {weather?.main?.humidity}%</p>
       </div>
       <CityImage city={weather?.name} />

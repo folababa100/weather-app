@@ -13,7 +13,7 @@ const useWeather = () => {
     setLoading(true);
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`,
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}&units=metric`,
       );
       setWeather(response.data);
       setLoading(false);

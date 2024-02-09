@@ -21,7 +21,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
   };
 
   return (
-    <>
+    <div className="w-100">
       <form className="SearchBar" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -40,7 +40,7 @@ const SearchBar: React.FC<SearchBarProps> = ({
       >
         Add to favorites
       </button>
-    </>
+    </div>
   );
 };
 
