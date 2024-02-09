@@ -1,30 +1,24 @@
 import React from 'react';
+import { WeatherData } from 'types';
+
 // import './WeatherDisplay.css';
 
-
 interface WeatherDisplayProps {
-  weatherData: {
-    name: string;
-    weather: {
-      description: string;
-    }[];
-    main: {
-      temp: number;
-      humidity: number;
-    };
-  } | null
+  weather: WeatherData;
 }
 
-const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ weatherData }) => {
-  return weatherData && (
-    <div className="weather-display">
+const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ weather }) => {
+  return (
+    weather && (
+      <div className="weather-display">
         <div>
-          <h2>{weatherData?.name}</h2>
-          <p>{weatherData?.weather?.[0]?.description}</p>
-          <p>Temperature: {weatherData?.main?.temp}°C</p>
-          <p>Humidity: {weatherData?.main?.humidity}%</p>
+          <h2>{weather?.name}</h2>
+          <p>{weather?.weather?.[0]?.description}</p>
+          <p>Temperature: {weather?.main?.temp}°C</p>
+          <p>Humidity: {weather?.main?.humidity}%</p>
         </div>
-    </div>
+      </div>
+    )
   );
 };
 

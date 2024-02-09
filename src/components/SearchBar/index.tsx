@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
 import './SearchBar.scss';
+import { WeatherData } from 'types';
 
 interface SearchBarProps {
   onSearch: (input: string) => void;
   addFavorite: (city: string) => void;
+  weather: WeatherData;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ onSearch, addFavorite }) => {
+const SearchBar: React.FC<SearchBarProps> = ({
+  weather,
+  onSearch,
+  addFavorite,
+}) => {
   const [input, setInput] = useState('');
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,7 +31,13 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch, addFavorite }) => {
         />
         <button type="submit">Search</button>
       </form>
-      <button onClick={() => addFavorite(input)}>Add to favorites</button>
+      <button
+        type="button"
+        disabled={!weather}
+        onClick={() => addFavorite(input)}
+      >
+        Add to favorites
+      </button>
     </>
   );
 };

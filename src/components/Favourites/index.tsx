@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './Favourites.scss';
+
 interface FavoritesProps {
   favorites: string[];
   removeFromFavorites: (city: string) => void;
@@ -15,7 +17,7 @@ const Favorites: React.FC<FavoritesProps> = ({
     <div>
       <h2>Favorites</h2>
       {favorites.length > 0 ? (
-        <ul>
+        <ul className="FavouritesList">
           {favorites.map((city, index) => (
             <li key={index}>
               {city}
