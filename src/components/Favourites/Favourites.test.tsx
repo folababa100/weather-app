@@ -8,7 +8,7 @@ describe('Favorites', () => {
   const favorites = ['Berlin', 'London'];
 
   beforeEach(() => {
-    vi.clearAllMocks(); // Reset mocks before each test
+    vi.clearAllMocks();
   });
 
   it('displays the favorites list correctly', () => {
