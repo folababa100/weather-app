@@ -7,7 +7,7 @@ import { WeatherData } from 'types';
 import './WeatherDisplay.scss';
 
 interface WeatherDisplayProps {
-  weather: WeatherData;
+  weather?: WeatherData;
 }
 
 const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ weather }) => {

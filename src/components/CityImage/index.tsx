@@ -13,7 +13,7 @@ const CityImage: React.FC<CityImageProps> = ({ city }) => {
 
   useEffect(() => {
     if (city) {
-      const fetchImage = async () => {
+      (async () => {
         try {
           const url = `https://api.unsplash.com/search/photos?page=1&query=${city}&client_id=${accessKey}`;
           const response = await axios.get(url);
@@ -25,9 +25,7 @@ const CityImage: React.FC<CityImageProps> = ({ city }) => {
         } catch (error) {
           console.error("Couldn't fetch city image", error);
         }
-      };
-
-      fetchImage();
+      })();
     }
   }, [city]);
 
