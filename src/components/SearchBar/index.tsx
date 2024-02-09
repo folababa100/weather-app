@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import './SearchBar.scss';
+
 import { WeatherData } from 'types';
+
+import './SearchBar.scss';
 
 interface SearchBarProps {
   onSearch: (input: string) => void;

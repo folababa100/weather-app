@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 import { useState } from 'react';
 
 const key = import.meta.env.VITE_WEATHER_API_KEY;
