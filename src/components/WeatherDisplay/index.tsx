@@ -2,6 +2,7 @@ import React from 'react';
 import { WeatherData } from 'types';
 
 import './WeatherDisplay.scss';
+import CityImage from 'components/CityImage';
 
 // import './WeatherDisplay.css';
 
@@ -18,6 +19,7 @@ const WeatherDisplay: React.FC<WeatherDisplayProps> = ({ weather }) => {
         <p>Temperature: {weather?.main?.temp}°C</p>
         <p>Humidity: {weather?.main?.humidity}%</p>
       </div>
+      <CityImage city={weather?.name} />
     </div>
   ) : null;
 };

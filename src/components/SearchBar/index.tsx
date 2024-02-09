@@ -29,7 +29,9 @@ const SearchBar: React.FC<SearchBarProps> = ({
           value={input}
           onChange={(e) => setInput(e.target.value)}
         />
-        <button type="submit">Search</button>
+        <button disabled={!input} type="submit">
+          Search
+        </button>
       </form>
       <button
         type="button"

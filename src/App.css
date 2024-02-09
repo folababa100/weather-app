@@ -1,1 +1,5 @@
-.btn
+.container {
+  max-width: 668px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
