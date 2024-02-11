@@ -1,4 +1,4 @@
-# My stock tracker.
+# Weather App
 
 ### Intro & Context
 This is my solution to the coding challenge. This App is a weather app that allows the
